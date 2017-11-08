@@ -1,0 +1,96 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:padding="15dp"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/BTNquit"
+            android:layout_alignTop="@+id/BTNquit"
+            android:gravity="center_vertical"
+            android:text="@string/text"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:typeface="monospace" />
+
+        <Button
+            android:id="@+id/BTNquit"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/blue_border"
+            android:onClick="exit"
+            android:text="Quit"
+            android:textColor="@color/light_blue" />
+
+        <ImageView
+            android:id="@+id/image_view"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="100dp"
+            android:src="@drawable/ic_bluetooth" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/image_view"
+            android:gravity="center_horizontal"
+            android:padding="15dp"
+            android:text="This app let's you to choose file from your device and share through bluetooth." />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/fileInfoLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/ivThumbNail"
+            android:layout_width="150dp"
+            android:layout_height="80dp"
+            android:src="@drawable/placeholder"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/tvFileName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="5dp"
+            android:layout_marginBottom="20dp"
+            android:padding="15dp"
+            android:text="Choose file to share"
+            android:textColor="#0bba1c"
+            android:textSize="12dp"
+            android:theme="@android:style/Animation.Translucent" />
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/sendBtooth"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:drawableStart="@drawable/ic_share"
+        android:padding="15dp"
+        android:text="Share"
+        android:textColor="#edebff"
+        android:theme="@style/ButtonTheme" />
+
+</LinearLayout>
